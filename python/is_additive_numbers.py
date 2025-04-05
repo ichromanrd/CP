@@ -75,6 +75,9 @@ def solution(num):
                     res_next = 0
                     continue
                 # but if calculated next element is still less than supposed-to-be next element then preserve the next element as current calculated element
+                # e.g: left operand is 56, right operand 91, calculated next element must be 147
+                # after visiting index with 1 value and add with its next element, it would be 14 but still less than 147
+                # in this case preserve next element as 14 not 4, in which 14 will be multiplied by 10, making it 140 + next element 7, matches the sum of 56 + 91
                 elif current_p_next < total_b:
                     res_next = current_p_next
                     continue
